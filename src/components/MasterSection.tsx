@@ -35,20 +35,20 @@ const MasterSection = () => {
             transition={{ duration: 0.8 }}
           >
             <p className="font-heading text-primary uppercase tracking-[0.3em] text-sm mb-2">
-              Head Instructor
+              About The Academy
             </p>
-            <h2 className="font-heading text-4xl md:text-6xl font-bold uppercase mb-6">
-              Master <span className="text-primary">Sensei</span>
+            <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase mb-6">
+              Building <span className="text-primary">Champions</span> Inside &amp; Outside The Ring
             </h2>
             <div className="w-16 h-1 bg-primary mb-6" />
+            <p className="text-muted-foreground text-lg leading-relaxed mb-4">
+              At MNS Success Martial Arts Academy, martial arts is not just about combat — it's about creating discipline, confidence, mental toughness, and leadership.
+            </p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              With over 20 years of martial arts mastery and multiple international championship titles, 
-              our head instructor brings world-class expertise to every session. Trained under legendary 
-              grandmasters across Asia, his teaching philosophy combines traditional discipline with 
-              modern combat science.
+              Our structured training programs help students improve physically and mentally while learning real self-defense skills, focus, respect, and self-control. Whether you're a beginner or an experienced fighter, our academy helps you unlock your full potential in a safe, motivating, and professional environment.
             </p>
             <div className="space-y-3">
-              {["5th Degree Black Belt", "International Champion", "Certified Combat Instructor", "20+ Years Experience"].map((item) => (
+              {["Discipline & Confidence", "Real Self-Defense Skills", "Focus, Respect & Self-Control", "Safe, Professional Environment"].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <div className="w-2 h-2 bg-primary rounded-full" />
                   <span className="text-foreground font-medium">{item}</span>

@@ -25,10 +25,13 @@ const ContactSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="font-heading text-primary uppercase tracking-[0.3em] text-sm mb-2">Get In Touch</p>
-          <h2 className="font-heading text-4xl md:text-6xl font-bold uppercase">
-            Start Your <span className="text-primary">Training</span> Today
+          <p className="font-heading text-primary uppercase tracking-[0.3em] text-sm mb-2">Our Mission</p>
+          <h2 className="font-heading text-3xl md:text-5xl font-bold uppercase leading-tight">
+            Train Hard <span className="text-primary">•</span> Stay Disciplined <span className="text-primary">•</span> Become <span className="text-primary">Unstoppable</span>
           </h2>
+          <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto mt-6">
+            Our mission is to help students become stronger, healthier, more confident, and mentally disciplined through professional martial arts education and fitness training.
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -100,7 +103,7 @@ const ContactSection = () => {
               className="bg-card border-border"
             />
             <Button variant="hero" size="lg" className="w-full py-6 text-sm sm:text-lg" type="submit">
-              Start Your Training Today
+              Start Training Today
             </Button>
           </motion.form>
         </div>

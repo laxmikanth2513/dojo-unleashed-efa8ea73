@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { Trophy, Medal, Award, Star } from "lucide-react";
+import { ShieldCheck, Award, UserCheck, Zap, Dumbbell, Smile } from "lucide-react";
 
 const achievements = [
-  { icon: Trophy, year: "2024", title: "National Championship", desc: "1st Place - Open Division" },
-  { icon: Medal, year: "2023", title: "International Open", desc: "Gold Medal - Heavyweight" },
-  { icon: Award, year: "2022", title: "State Championship", desc: "Team Gold - 5 Medals" },
-  { icon: Star, year: "2021", title: "Grand Master Certification", desc: "5th Degree Black Belt" },
-  { icon: Trophy, year: "2020", title: "Pan-Asian Games", desc: "Silver Medal - Sparring" },
-  { icon: Medal, year: "2019", title: "World Karate League", desc: "Bronze Medal - Kata" },
+  { icon: Award, year: "01", title: "Certified & Experienced Coaches", desc: "Trained by qualified professionals with years of competitive experience." },
+  { icon: ShieldCheck, year: "02", title: "Professional Training Environment", desc: "A disciplined, structured space built for serious martial arts growth." },
+  { icon: UserCheck, year: "03", title: "Personal Attention For Every Student", desc: "Focused coaching that helps every student progress at their own pace." },
+  { icon: Zap, year: "04", title: "Modern Martial Arts Techniques", desc: "Up-to-date training methods combining tradition with modern combat science." },
+  { icon: Dumbbell, year: "05", title: "Fitness + Self-Defense Combined", desc: "Build strength, stamina, and real-world self-defense skills together." },
+  { icon: Smile, year: "06", title: "Friendly & Motivating Atmosphere", desc: "A supportive community that pushes you to become your strongest self." },
 ];
 
 const AchievementsSection = () => {
@@ -20,9 +20,9 @@ const AchievementsSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="font-heading text-primary uppercase tracking-[0.3em] text-sm mb-2">Our Record</p>
+          <p className="font-heading text-primary uppercase tracking-[0.3em] text-sm mb-2">The MNS Advantage</p>
           <h2 className="font-heading text-4xl md:text-6xl font-bold uppercase">
-            <span className="text-primary">Achievements</span>
+            Why <span className="text-primary">Choose Us</span>
           </h2>
         </motion.div>
 
