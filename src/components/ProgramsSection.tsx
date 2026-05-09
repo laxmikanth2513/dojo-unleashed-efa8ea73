@@ -4,23 +4,23 @@ import { Shield, Swords, Users, Trophy } from "lucide-react";
 const programs = [
   {
     icon: Users,
-    title: "Kids Training",
-    description: "Building confidence, discipline, and coordination in young warriors ages 5-14.",
+    title: "Kids Martial Arts",
+    description: "Build discipline, confidence, focus, fitness, flexibility, anti-bullying awareness, and self-defense skills in a positive and energetic environment.",
   },
   {
     icon: Swords,
-    title: "Adults Training",
-    description: "Complete martial arts training for all skill levels. Build strength, flexibility, and fighting technique.",
+    title: "Kickboxing",
+    description: "Professional kickboxing training focused on strength, speed, stamina, coordination, fat loss, and overall fitness.",
   },
   {
     icon: Shield,
-    title: "Self Defense",
-    description: "Practical self-defense techniques for real-world situations. Stay safe, stay prepared.",
+    title: "Karate",
+    description: "Traditional karate training that develops mental discipline, self-control, confidence, precision, and strong martial arts fundamentals.",
   },
   {
     icon: Trophy,
-    title: "Competition Training",
-    description: "Elite-level training for tournament fighters. Push your limits and claim victory.",
+    title: "MMA (Mixed Martial Arts)",
+    description: "Complete MMA training combining striking, grappling, conditioning, combat techniques, and competition preparation.",
   },
 ];
 

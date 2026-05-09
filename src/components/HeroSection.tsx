@@ -27,7 +27,7 @@ const HeroSection = () => {
             transition={{ delay: 0.2 }}
             className="font-heading text-primary uppercase tracking-[0.3em] text-sm md:text-base mb-4"
           >
-            Train Hard. Fight Smart.
+            Professional MMA, Kickboxing, Karate &amp; Self-Defense Training
           </motion.p>
 
           <motion.h1
@@ -36,9 +36,9 @@ const HeroSection = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="font-heading text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold uppercase leading-tight mb-6"
           >
-            Become Stronger.{" "}
-            <span className="text-gradient">Faster.</span>{" "}
-            Unstoppable.
+            Unleash The{" "}
+            <span className="text-gradient">Fighter</span>{" "}
+            Within
           </motion.h1>
 
           <motion.p
@@ -47,7 +47,7 @@ const HeroSection = () => {
             transition={{ delay: 0.6 }}
             className="text-muted-foreground text-lg md:text-xl max-w-xl mb-8"
           >
-            Train with the best martial arts academy near you. World-class instruction, proven results.
+            Welcome to MNS Success Martial Arts Academy — where discipline meets power, and ordinary people transform into unstoppable warriors.
           </motion.p>
 
           <motion.div
@@ -60,7 +60,7 @@ const HeroSection = () => {
               <a href="#contact">Join Now</a>
             </Button>
             <Button variant="heroOutline" size="lg" className="px-10 py-6" asChild>
-              <a href="#programs">Our Programs</a>
+              <a href="#contact">Book Free Trial</a>
             </Button>
           </motion.div>
         </div>
