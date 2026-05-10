@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
-  { value: "20+", label: "Years Experience" },
-  { value: "5000+", label: "Students Trained" },
+  { value: "14+", label: "Years Experience" },
+  { value: "6000+", label: "Students Trained" },
   { value: "3", label: "Locations" },
 ];
 
@@ -19,7 +19,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 pt-20">
+      <div className="relative container mx-auto px-4 pt-24 sm:pt-28 md:pt-32">
         <div className="max-w-3xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}

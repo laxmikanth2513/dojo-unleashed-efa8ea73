@@ -4,7 +4,7 @@ import { Shield, Swords, Users, Trophy } from "lucide-react";
 const programs = [
   {
     icon: Users,
-    title: "Kids Martial Arts",
+    title: "Kids & Adult Martial Arts",
     description: "Build discipline, confidence, focus, fitness, flexibility, anti-bullying awareness, and self-defense skills in a positive and energetic environment.",
   },
   {
