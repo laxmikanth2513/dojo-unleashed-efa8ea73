@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import logo from "@/assets/logo.png";
+
 
 const Preloader = () => {
   const [show, setShow] = useState(true);
@@ -47,32 +47,30 @@ const Preloader = () => {
             }}
           />
 
-          {/* Logo */}
+          {/* Brand Name */}
           <motion.div
-            className="relative z-10"
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{
-              opacity: 1,
-              scale: [0.95, 1.05, 1],
-            }}
+            className="relative z-10 px-6 text-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: [0.95, 1.04, 1] }}
             transition={{
               opacity: { duration: 1, ease: "easeOut" },
               scale: { duration: 2.6, ease: "easeInOut", times: [0, 0.5, 1] },
             }}
           >
-            <motion.img
-              src={logo}
-              alt="MNS Success Martial Arts Academy"
-              className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 object-contain drop-shadow-[0_0_40px_hsl(0_100%_50%/0.6)]"
+            <motion.h1
+              className="font-heading font-extrabold uppercase tracking-wider text-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight"
               animate={{
-                filter: [
-                  "drop-shadow(0 0 20px hsl(0 100% 50% / 0.4))",
-                  "drop-shadow(0 0 60px hsl(0 100% 50% / 0.8))",
-                  "drop-shadow(0 0 20px hsl(0 100% 50% / 0.4))",
+                textShadow: [
+                  "0 0 20px hsl(0 100% 50% / 0.4)",
+                  "0 0 50px hsl(0 100% 50% / 0.9)",
+                  "0 0 20px hsl(0 100% 50% / 0.4)",
                 ],
               }}
               transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-            />
+            >
+              MNS SUCCESS
+              <span className="block text-primary">MARTIAL ARTS ACADEMY</span>
+            </motion.h1>
           </motion.div>
 
           {/* Loading bar */}
