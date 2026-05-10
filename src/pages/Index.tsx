@@ -1,3 +1,4 @@
+import Preloader from "@/components/Preloader";
 import TopHeader from "@/components/TopHeader";
 import HeroSection from "@/components/HeroSection";
 import MasterSection from "@/components/MasterSection";
@@ -13,6 +14,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Preloader />
       <TopHeader />
       <HeroSection />
       <MasterSection />
