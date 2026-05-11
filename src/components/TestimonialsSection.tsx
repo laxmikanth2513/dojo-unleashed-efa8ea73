@@ -36,7 +36,7 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
-  const [perView, setPerView] = useState(3);
+  const [perView, setPerView] = useState(2);
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
