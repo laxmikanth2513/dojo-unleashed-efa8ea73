@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import logo from "@/assets/logo.png";
 
 
 const Preloader = () => {
@@ -57,20 +58,19 @@ const Preloader = () => {
               scale: { duration: 2.6, ease: "easeInOut", times: [0, 0.5, 1] },
             }}
           >
-            <motion.h1
-              className="font-heading font-extrabold uppercase tracking-wider text-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight"
+            <motion.img
+              src={logo}
+              alt="MNS Success Martial Arts Academy"
+              className="mx-auto w-48 sm:w-64 md:w-80 lg:w-96 h-auto"
               animate={{
-                textShadow: [
-                  "0 0 20px hsl(0 100% 50% / 0.4)",
-                  "0 0 50px hsl(0 100% 50% / 0.9)",
-                  "0 0 20px hsl(0 100% 50% / 0.4)",
+                filter: [
+                  "drop-shadow(0 0 20px hsl(0 100% 50% / 0.4))",
+                  "drop-shadow(0 0 50px hsl(0 100% 50% / 0.9))",
+                  "drop-shadow(0 0 20px hsl(0 100% 50% / 0.4))",
                 ],
               }}
               transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-            >
-              MNS SUCCESS
-              <span className="block text-primary">MARTIAL ARTS ACADEMY</span>
-            </motion.h1>
+            />
           </motion.div>
 
           {/* Loading bar */}
