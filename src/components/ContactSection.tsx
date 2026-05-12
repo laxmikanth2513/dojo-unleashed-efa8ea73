@@ -48,7 +48,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-muted-foreground text-sm">Call Us</p>
-                <p className="font-heading font-bold text-lg">+1 (555) 123-4567</p>
+                <p className="font-heading font-bold text-lg">+91 8309969720</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -57,7 +57,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-muted-foreground text-sm">WhatsApp</p>
-                <p className="font-heading font-bold text-lg">+1 (555) 123-4567</p>
+                <p className="font-heading font-bold text-lg">+91 9951294484</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -66,7 +66,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="text-muted-foreground text-sm">Email</p>
-                <p className="font-heading font-bold text-sm sm:text-lg break-all">info@mnssuccessacademy.com</p>
+                <p className="font-heading font-bold text-sm sm:text-lg break-all">mnssuccessmartialartsacademy@gmail.com</p>
               </div>
             </div>
           </motion.div>
