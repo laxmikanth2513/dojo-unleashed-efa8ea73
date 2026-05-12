@@ -9,7 +9,7 @@ const TopHeader = () => {
           <span className="text-primary text-2xl xs:text-3xl sm:text-3xl md:text-4xl lg:text-5xl block sm:inline">
             MNS Success
           </span>
-          <span className="text-white text-lg xs:text-xl sm:text-3xl md:text-4xl lg:text-5xl block sm:inline sm:ml-2 mt-1 sm:mt-0">
+          <span className="text-white text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl block sm:inline sm:ml-2 mt-1 sm:mt-0">
             Martial Arts Academy
           </span>
         </a>
