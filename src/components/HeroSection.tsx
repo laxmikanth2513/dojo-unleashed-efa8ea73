@@ -71,7 +71,7 @@ const HeroSection = () => {
       {/* Content */}
       <motion.div
         style={{ y: yContent, opacity }}
-        className="relative container mx-auto px-4 pt-24 sm:pt-28 md:pt-32 z-10"
+        className="relative container mx-auto px-4 pt-24 sm:pt-28 md:pt-32 pb-24 sm:pb-16 z-10"
       >
         <div className="max-w-3xl">
           <motion.p
@@ -166,7 +166,7 @@ const HeroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+        className="absolute bottom-2 sm:bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
         aria-label="Scroll down"
       >
         <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
