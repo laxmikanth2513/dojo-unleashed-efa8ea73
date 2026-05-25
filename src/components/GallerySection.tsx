@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ImageOff, VideoOff, X } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ChevronLeft, ChevronRight, ImageOff, VideoOff, X } from "lucide-react";
 import gym1 from "@/assets/gallery/gym-1.jpeg";
 import gym2 from "@/assets/gallery/gym-2.jpeg";
 import gym3 from "@/assets/gallery/gym-3.jpeg";
@@ -11,20 +13,42 @@ import gym7 from "@/assets/gallery/gym-7.jpeg";
 import gym8 from "@/assets/gallery/gym-8.jpeg";
 import gym9 from "@/assets/gallery/gym-9.jpeg";
 import gym10 from "@/assets/gallery/gym-10.jpeg";
+import gym11 from "@/assets/gallery/gym-11.jpeg";
+import gym12 from "@/assets/gallery/gym-12.jpeg";
+import gym13 from "@/assets/gallery/gym-13.jpeg";
+import gym14 from "@/assets/gallery/gym-14.jpeg";
+import gym15 from "@/assets/gallery/gym-15.jpeg";
+import gym16 from "@/assets/gallery/gym-16.jpeg";
+import gym17 from "@/assets/gallery/gym-17.jpeg";
+import gym18 from "@/assets/gallery/gym-18.jpeg";
+import gym19 from "@/assets/gallery/gym-19.jpeg";
+import gym20 from "@/assets/gallery/gym-20.jpeg";
 
+// Add new images here — they'll automatically appear in the Photos slider.
 const photos: { src: string; alt: string }[] = [
   { src: gym1, alt: "Training floor with Bruce Lee mural" },
-  { src: gym3, alt: "Wide view of the dojo with equipment" },
+  { src: gym3, alt: "Wide dojo view with equipment" },
   { src: gym4, alt: "Mat area with hanging punch bag" },
   { src: gym5, alt: "Premium training equipment rack" },
   { src: gym7, alt: "Full dojo view with trophies" },
   { src: gym8, alt: "Training mat with kickboxing gear" },
+  { src: gym17, alt: "Heavy bag row in training hall" },
+  { src: gym18, alt: "Mat area with karate mural" },
+  { src: gym19, alt: "Spacious dojo with KARATE mural" },
+  { src: gym20, alt: "Trophy wall and MNS Success banner" },
   { src: gym6, alt: "Olympic rings and trophy wall" },
+  { src: gym11, alt: "Punching bag and floor view" },
+  { src: gym14, alt: "Wide arena view" },
   { src: gym2, alt: "Reception and waiting lounge" },
+  { src: gym12, alt: "Office and reception area" },
+  { src: gym13, alt: "Office workstation" },
   { src: gym9, alt: "Master's office with Buddha mural" },
   { src: gym10, alt: "Office and trophy display" },
+  { src: gym15, alt: "Office room with Buddha mural" },
+  { src: gym16, alt: "Mat floor and equipment view" },
 ];
 
+// Add videos here — they'll automatically appear in the Videos slider.
 const videos: { src: string; poster?: string; title: string }[] = [];
 
 type Tab = "photos" | "videos";
@@ -79,16 +103,13 @@ const GallerySection = () => {
               {photos.length === 0 ? (
                 <EmptyState icon={<ImageOff className="w-10 h-10" />} label="No photos yet" />
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
-                  {photos.map((p, i) => (
-                    <motion.button
+                <MediaSlider
+                  autoplay
+                  items={photos.map((p, i) => (
+                    <button
                       key={i}
                       onClick={() => setLightbox(i)}
-                      initial={{ opacity: 0, y: 24 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-50px" }}
-                      transition={{ duration: 0.5, delay: (i % 8) * 0.05 }}
-                      className="group relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-card hover:border-primary/70 hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-all duration-500"
+                      className="group relative w-full aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/70 hover:shadow-[0_0_35px_hsl(var(--primary)/0.45)] transition-all duration-500"
                     >
                       <img
                         src={p.src}
@@ -97,11 +118,10 @@ const GallerySection = () => {
                         decoding="async"
                         className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
-                      <div className="absolute inset-0 ring-0 group-hover:ring-2 ring-primary/40 rounded-xl transition-all" />
-                    </motion.button>
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/15 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
+                    </button>
                   ))}
-                </div>
+                />
               )}
             </motion.div>
           ) : (
@@ -115,15 +135,12 @@ const GallerySection = () => {
               {videos.length === 0 ? (
                 <EmptyState icon={<VideoOff className="w-10 h-10" />} label="No videos yet" />
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
-                  {videos.map((v, i) => (
-                    <motion.div
+                <MediaSlider
+                  aspect="video"
+                  items={videos.map((v, i) => (
+                    <div
                       key={i}
-                      initial={{ opacity: 0, y: 24 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "-50px" }}
-                      transition={{ duration: 0.5, delay: (i % 6) * 0.05 }}
-                      className="group relative aspect-video overflow-hidden rounded-xl border border-border bg-card hover:border-primary/70 hover:shadow-[0_0_30px_hsl(var(--primary)/0.4)] transition-all duration-500"
+                      className="relative w-full aspect-video overflow-hidden rounded-2xl border border-border bg-black hover:border-primary/70 hover:shadow-[0_0_35px_hsl(var(--primary)/0.45)] transition-all duration-500"
                     >
                       <video
                         src={v.src}
@@ -131,11 +148,11 @@ const GallerySection = () => {
                         controls
                         preload="metadata"
                         playsInline
-                        className="absolute inset-0 w-full h-full object-cover bg-black"
+                        className="absolute inset-0 w-full h-full object-cover"
                       />
-                    </motion.div>
+                    </div>
                   ))}
-                </div>
+                />
               )}
             </motion.div>
           )}
@@ -173,6 +190,88 @@ const GallerySection = () => {
         )}
       </AnimatePresence>
     </section>
+  );
+};
+
+const MediaSlider = ({
+  items,
+  autoplay = false,
+  aspect = "photo",
+}: {
+  items: React.ReactNode[];
+  autoplay?: boolean;
+  aspect?: "photo" | "video";
+}) => {
+  const plugins = autoplay
+    ? [Autoplay({ delay: 3500, stopOnInteraction: false, stopOnMouseEnter: true })]
+    : [];
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start", dragFree: false, containScroll: "trimSnaps" },
+    plugins,
+  );
+  const [selected, setSelected] = useState(0);
+  const [snaps, setSnaps] = useState<number[]>([]);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onSelect = () => setSelected(emblaApi.selectedScrollSnap());
+    setSnaps(emblaApi.scrollSnapList());
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", () => {
+      setSnaps(emblaApi.scrollSnapList());
+      onSelect();
+    });
+    onSelect();
+  }, [emblaApi]);
+
+  const basis = aspect === "video" ? "lg:basis-1/2" : "md:basis-1/2 lg:basis-1/3";
+
+  return (
+    <div className="relative max-w-6xl mx-auto">
+      <div ref={emblaRef} className="overflow-hidden">
+        <div className="flex -ml-4 sm:-ml-6">
+          {items.map((item, i) => (
+            <div
+              key={i}
+              className={`pl-4 sm:pl-6 min-w-0 shrink-0 grow-0 basis-full ${basis}`}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button
+        onClick={scrollPrev}
+        aria-label="Previous"
+        className="absolute -left-2 sm:-left-5 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-primary text-foreground hover:text-primary-foreground rounded-full p-2 sm:p-3 border border-border hover:border-primary shadow-[0_0_20px_hsl(var(--primary)/0.3)] transition-all"
+      >
+        <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+      </button>
+      <button
+        onClick={scrollNext}
+        aria-label="Next"
+        className="absolute -right-2 sm:-right-5 top-1/2 -translate-y-1/2 z-10 bg-background/80 hover:bg-primary text-foreground hover:text-primary-foreground rounded-full p-2 sm:p-3 border border-border hover:border-primary shadow-[0_0_20px_hsl(var(--primary)/0.3)] transition-all"
+      >
+        <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+      </button>
+
+      <div className="flex items-center justify-center gap-2 mt-6">
+        {snaps.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => emblaApi?.scrollTo(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              selected === i ? "w-8 bg-primary" : "w-2 bg-border hover:bg-primary/60"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
