@@ -23,6 +23,13 @@ import gym17 from "@/assets/gallery/gym-17.jpeg";
 import gym18 from "@/assets/gallery/gym-18.jpeg";
 import gym19 from "@/assets/gallery/gym-19.jpeg";
 import gym20 from "@/assets/gallery/gym-20.jpeg";
+import video1 from "@/assets/videos/video-1.mp4";
+import video2 from "@/assets/videos/video-2.mp4";
+import video3 from "@/assets/videos/video-3.mp4";
+import video4 from "@/assets/videos/video-4.mp4";
+import video5 from "@/assets/videos/video-5.mp4";
+import video6 from "@/assets/videos/video-6.mp4";
+import video7 from "@/assets/videos/video-7.mp4";
 
 // Add new images here — they'll automatically appear in the Photos slider.
 const photos: { src: string; alt: string }[] = [
@@ -49,7 +56,15 @@ const photos: { src: string; alt: string }[] = [
 ];
 
 // Add videos here — they'll automatically appear in the Videos slider.
-const videos: { src: string; poster?: string; title: string }[] = [];
+const videos: { src: string; poster?: string; title: string }[] = [
+  { src: video1, title: "Training Session 1" },
+  { src: video2, title: "Training Session 2" },
+  { src: video3, title: "Training Session 3" },
+  { src: video4, title: "Training Session 4" },
+  { src: video5, title: "Training Session 5" },
+  { src: video6, title: "Training Session 6" },
+  { src: video7, title: "Training Session 7" },
+];
 
 type Tab = "photos" | "videos";
 
