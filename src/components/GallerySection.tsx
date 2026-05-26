@@ -3,26 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight, ImageOff, VideoOff, X } from "lucide-react";
-import gym1 from "@/assets/gallery/gym-1.jpeg";
-import gym2 from "@/assets/gallery/gym-2.jpeg";
-import gym3 from "@/assets/gallery/gym-3.jpeg";
-import gym4 from "@/assets/gallery/gym-4.jpeg";
-import gym5 from "@/assets/gallery/gym-5.jpeg";
-import gym6 from "@/assets/gallery/gym-6.jpeg";
-import gym7 from "@/assets/gallery/gym-7.jpeg";
-import gym8 from "@/assets/gallery/gym-8.jpeg";
-import gym9 from "@/assets/gallery/gym-9.jpeg";
-import gym10 from "@/assets/gallery/gym-10.jpeg";
-import gym11 from "@/assets/gallery/gym-11.jpeg";
-import gym12 from "@/assets/gallery/gym-12.jpeg";
-import gym13 from "@/assets/gallery/gym-13.jpeg";
-import gym14 from "@/assets/gallery/gym-14.jpeg";
-import gym15 from "@/assets/gallery/gym-15.jpeg";
-import gym16 from "@/assets/gallery/gym-16.jpeg";
-import gym17 from "@/assets/gallery/gym-17.jpeg";
-import gym18 from "@/assets/gallery/gym-18.jpeg";
-import gym19 from "@/assets/gallery/gym-19.jpeg";
-import gym20 from "@/assets/gallery/gym-20.jpeg";
+import photo1 from "@/assets/gallery/photo-1.jpeg";
+import photo2 from "@/assets/gallery/photo-2.jpeg";
+import photo3 from "@/assets/gallery/photo-3.jpeg";
+import photo4 from "@/assets/gallery/photo-4.jpeg";
+import photo5 from "@/assets/gallery/photo-5.jpeg";
+import photo6 from "@/assets/gallery/photo-6.jpeg";
+import photo7 from "@/assets/gallery/photo-7.jpeg";
+import photo8 from "@/assets/gallery/photo-8.jpeg";
+import photo9 from "@/assets/gallery/photo-9.jpeg";
+import photo10 from "@/assets/gallery/photo-10.jpeg";
 import video1 from "@/assets/videos/video-1.mp4";
 import video2 from "@/assets/videos/video-2.mp4";
 import video3 from "@/assets/videos/video-3.mp4";
@@ -33,26 +23,16 @@ import video7 from "@/assets/videos/video-7.mp4";
 
 // Add new images here — they'll automatically appear in the Photos slider.
 const photos: { src: string; alt: string }[] = [
-  { src: gym1, alt: "Training floor with Bruce Lee mural" },
-  { src: gym3, alt: "Wide dojo view with equipment" },
-  { src: gym4, alt: "Mat area with hanging punch bag" },
-  { src: gym5, alt: "Premium training equipment rack" },
-  { src: gym7, alt: "Full dojo view with trophies" },
-  { src: gym8, alt: "Training mat with kickboxing gear" },
-  { src: gym17, alt: "Heavy bag row in training hall" },
-  { src: gym18, alt: "Mat area with karate mural" },
-  { src: gym19, alt: "Spacious dojo with KARATE mural" },
-  { src: gym20, alt: "Trophy wall and MNS Success banner" },
-  { src: gym6, alt: "Olympic rings and trophy wall" },
-  { src: gym11, alt: "Punching bag and floor view" },
-  { src: gym14, alt: "Wide arena view" },
-  { src: gym2, alt: "Reception and waiting lounge" },
-  { src: gym12, alt: "Office and reception area" },
-  { src: gym13, alt: "Office workstation" },
-  { src: gym9, alt: "Master's office with Buddha mural" },
-  { src: gym10, alt: "Office and trophy display" },
-  { src: gym15, alt: "Office room with Buddha mural" },
-  { src: gym16, alt: "Mat floor and equipment view" },
+  { src: photo1, alt: "Reception and office lounge" },
+  { src: photo2, alt: "Training floor with Bruce Lee mural" },
+  { src: photo3, alt: "Wide dojo view with equipment rack" },
+  { src: photo4, alt: "Premium training equipment shelves" },
+  { src: photo5, alt: "Full dojo with punching bags and trophies" },
+  { src: photo6, alt: "Master's office with Buddha mural" },
+  { src: photo7, alt: "Spacious training mat area" },
+  { src: photo8, alt: "Heavy bag row in training hall" },
+  { src: photo9, alt: "Mat area with karate mural and bags" },
+  { src: photo10, alt: "Dojo with karate mural and blue mats" },
 ];
 
 // Add videos here — they'll automatically appear in the Videos slider.
