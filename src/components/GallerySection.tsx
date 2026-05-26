@@ -13,6 +13,13 @@ import photo7 from "@/assets/gallery/photo-7.jpeg";
 import photo8 from "@/assets/gallery/photo-8.jpeg";
 import photo9 from "@/assets/gallery/photo-9.jpeg";
 import photo10 from "@/assets/gallery/photo-10.jpeg";
+import photo11 from "@/assets/gallery/photo-11.jpeg";
+import photo12 from "@/assets/gallery/photo-12.jpeg";
+import photo13 from "@/assets/gallery/photo-13.jpeg";
+import photo14 from "@/assets/gallery/photo-14.jpeg";
+import photo15 from "@/assets/gallery/photo-15.jpeg";
+import photo16 from "@/assets/gallery/photo-16.jpeg";
+import photo17 from "@/assets/gallery/photo-17.jpeg";
 import video1 from "@/assets/videos/video-1.mp4";
 import video2 from "@/assets/videos/video-2.mp4";
 import video3 from "@/assets/videos/video-3.mp4";
@@ -33,6 +40,13 @@ const photos: { src: string; alt: string }[] = [
   { src: photo8, alt: "Heavy bag row in training hall" },
   { src: photo9, alt: "Mat area with karate mural and bags" },
   { src: photo10, alt: "Dojo with karate mural and blue mats" },
+  { src: photo11, alt: "Training hall with MNS Success branding" },
+  { src: photo12, alt: "Wide dojo view with XPEED equipment" },
+  { src: photo13, alt: "Training mat with karate mural and bags" },
+  { src: photo14, alt: "Heavy bags row with equipment shelves" },
+  { src: photo15, alt: "Trophy display with training mirror" },
+  { src: photo16, alt: "Office lounge with blue sofas" },
+  { src: photo17, alt: "Spacious dojo with karate mural" },
 ];
 
 // Add videos here — they'll automatically appear in the Videos slider.
