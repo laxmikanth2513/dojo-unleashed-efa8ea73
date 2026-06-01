@@ -14,14 +14,29 @@ const testimonials = [
     role: "Parent",
   },
   {
+    name: "NABANITA PANIGRAHI",
+    text: "My daughter is zero when she joined now she is doing far better than our expectations. Master is not looking what to be taught rather he is thinking what she can do more. Me and my daughter feeling blessed having a master and a qualified instructors. Hats off to everyone and specially Master Narsimha Yadav sir. Your beloved student Varnika.",
+    role: "10 months ago",
+  },
+  {
     name: "ROHIT VERMA",
     text: "The MMA coaching here is on another level. Proper technique, fitness training, and real discipline are taught.",
     role: "MMA Student",
   },
   {
+    name: "HABIBA BEGUM",
+    text: "The instructors are knowledgeable, patient and truly dedicated to each student's progress. My child has developed better focus, self-confidence and self-control since joining. Thank you so much sir",
+    role: "5 months ago",
+  },
+  {
     name: "KAVYA NAIR",
     text: "One of the best martial arts academies in the city. The trainers genuinely care about every student's growth.",
     role: "Karate Student",
+  },
+  {
+    name: "MUNIPALLY PRASHANTH",
+    text: "I am very happy that my children Suhas and Suryansh are getting trained here in the guidance of Narsimha Yadav sir, and more power to this institute in the coming days. Thank you.",
+    role: "Edited 5 months ago",
   },
   {
     name: "VIKRAM SINGH",
@@ -33,7 +48,24 @@ const testimonials = [
     text: "The atmosphere is energetic and professional. Perfect place for kids and adults to learn martial arts.",
     role: "Taekwondo Student",
   },
+  {
+    name: "ALLAKONDA DIVYA SRI",
+    text: "The best training classes of MNS. There the best trainers, one of the best classes for women and children with a friendly, safe and secure environment. The experience with this is ultimate.",
+    role: "7 months ago",
+  },
 ];
+
+const getInitials = (name: string) => {
+  const parts = name.split(" ");
+  const initials = parts.slice(0, 2).map((p) => p[0]);
+  return initials.join("").toUpperCase();
+};
+
+const Avatar = ({ name }: { name: string }) => (
+  <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center text-primary font-heading font-bold text-sm shrink-0">
+    {getInitials(name)}
+  </div>
+);
 
 const TestimonialsSection = () => {
   const [perView, setPerView] = useState(2);
