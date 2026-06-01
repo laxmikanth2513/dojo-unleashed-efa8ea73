@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import kidsAdultImg from "@/assets/programs/kids-adult.jpeg";
-import kickboxingImg from "@/assets/programs/kickboxing.jpeg";
-import karateImg from "@/assets/programs/karate.jpeg";
-import mmaImg from "@/assets/programs/mma.jpeg";
+import kidsAdultImg from "@/assets/programs/kids-adult.png";
+import kickboxingImg from "@/assets/programs/kickboxing.png";
+import karateImg from "@/assets/programs/karate.png";
+import mmaImg from "@/assets/programs/mma.png";
 
 const programs = [
   {
@@ -54,19 +54,18 @@ const ProgramsSection = () => {
               className="program-card group bg-card border border-border rounded-lg p-8 hover-glow hover-scale cursor-pointer flex flex-col items-center text-center"
             >
               <div
-                className="program-logo flex items-center justify-center overflow-hidden rounded-full mb-6 transition-all duration-300 group-hover:scale-110"
+                className="program-logo flex items-center justify-center overflow-hidden rounded-full mb-6 transition-all duration-300 group-hover:scale-110 flex-shrink-0"
                 style={{
                   width: 90,
                   height: 90,
-                  background: "hsl(0 100% 50% / 0.08)",
                   border: "2px solid hsl(0 100% 50% / 0.25)",
                 }}
               >
                 <img
                   src={program.image}
                   alt={program.title}
-                  className="object-contain transition-transform duration-300 group-hover:scale-105"
-                  style={{ width: "70%", height: "70%" }}
+                  className="w-full h-full rounded-full"
+                  style={{ objectFit: "cover", objectPosition: "center" }}
                   loading="lazy"
                 />
               </div>
