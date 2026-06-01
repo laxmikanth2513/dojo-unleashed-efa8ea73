@@ -5,7 +5,7 @@ const locations = [
   {
     name: "MNS SUCCESS MARTIAL ARTS ACADEMY",
     address: "NALLAGANDLA, HUDA LAYOUT RD, WATER TANK RD, NEAR VISHNAVI FARMS, DR. SWATHI'S CLINIC",
-    timings: "5 AM – 9 AM",
+    timings: "6 AM – 9 AM | 5 PM – 8 PM",
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1439.500981881846!2d78.30669271412182!3d17.47370770898403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9320b4b006dd%3A0x5918e0ff54d72a97!2sMNS%20SUCCESS%20MARTIAL%20ARTS%20academy!5e1!3m2!1sen!2sin!4v1779767478263!5m2!1sen!2sin",
     mapUrl:
