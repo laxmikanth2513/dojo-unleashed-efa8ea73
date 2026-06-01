@@ -159,9 +159,12 @@ const TestimonialsSection = () => {
                   <p className="text-muted-foreground leading-relaxed mb-6 italic flex-1">
                     "{t.text}"
                   </p>
-                  <div>
-                    <p className="font-heading font-bold uppercase">{t.name}</p>
-                    <p className="text-primary text-sm">{t.role}</p>
+                  <div className="flex items-center gap-3">
+                    <Avatar name={t.name} />
+                    <div>
+                      <p className="font-heading font-bold uppercase">{t.name}</p>
+                      <p className="text-primary text-sm">{t.role}</p>
+                    </div>
                   </div>
                 </div>
               </div>
