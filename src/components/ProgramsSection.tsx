@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import kidsAdultImg from "@/assets/programs/kids-adult.jpeg";
-import kickboxingImg from "@/assets/programs/kickboxing.jpeg";
-import karateImg from "@/assets/programs/karate.jpeg";
-import mmaImg from "@/assets/programs/mma.jpeg";
+import kidsAdultImg from "@/assets/programs/kids-adult.png";
+import kickboxingImg from "@/assets/programs/kickboxing.png";
+import karateImg from "@/assets/programs/karate.png";
+import mmaImg from "@/assets/programs/mma.png";
 
 const programs = [
   {
