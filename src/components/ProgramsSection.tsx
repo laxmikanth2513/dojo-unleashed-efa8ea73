@@ -1,24 +1,27 @@
 import { motion } from "framer-motion";
-import { Shield, Swords, Users, Trophy } from "lucide-react";
+import kidsAdultImg from "@/assets/programs/kids-adult.jpeg";
+import kickboxingImg from "@/assets/programs/kickboxing.jpeg";
+import karateImg from "@/assets/programs/karate.jpeg";
+import mmaImg from "@/assets/programs/mma.jpeg";
 
 const programs = [
   {
-    icon: Users,
+    image: kidsAdultImg,
     title: "Kids & Adult Martial Arts",
     description: "Build discipline, confidence, focus, fitness, flexibility, anti-bullying awareness, and self-defense skills in a positive and energetic environment.",
   },
   {
-    icon: Swords,
+    image: kickboxingImg,
     title: "Kickboxing",
     description: "Professional kickboxing training focused on strength, speed, stamina, coordination, fat loss, and overall fitness.",
   },
   {
-    icon: Shield,
+    image: karateImg,
     title: "Karate",
     description: "Traditional karate training that develops mental discipline, self-control, confidence, precision, and strong martial arts fundamentals.",
   },
   {
-    icon: Trophy,
+    image: mmaImg,
     title: "MMA (Mixed Martial Arts)",
     description: "Complete MMA training combining striking, grappling, conditioning, combat techniques, and competition preparation.",
   },
@@ -48,10 +51,24 @@ const ProgramsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="group bg-card border border-border rounded-lg p-8 hover-glow hover-scale cursor-pointer"
+              className="program-card group bg-card border border-border rounded-lg p-8 hover-glow hover-scale cursor-pointer flex flex-col items-center text-center"
             >
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <program.icon className="w-7 h-7 text-primary" />
+              <div
+                className="program-logo flex items-center justify-center overflow-hidden rounded-full mb-6 transition-all duration-300 group-hover:scale-110"
+                style={{
+                  width: 90,
+                  height: 90,
+                  background: "hsl(0 100% 50% / 0.08)",
+                  border: "2px solid hsl(0 100% 50% / 0.25)",
+                }}
+              >
+                <img
+                  src={program.image}
+                  alt={program.title}
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  style={{ width: "70%", height: "70%" }}
+                  loading="lazy"
+                />
               </div>
               <h3 className="font-heading text-xl font-bold uppercase mb-3">{program.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{program.description}</p>
