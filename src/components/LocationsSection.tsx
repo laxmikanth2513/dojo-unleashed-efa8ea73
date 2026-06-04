@@ -14,7 +14,7 @@ const locations = [
   {
     name: "MNS SUCCESS MARTIAL ARTS ACADEMY",
     address: "New MIG, Road No. 15, Opposite of SPS School",
-    timings: "5 AM – 9 AM",
+    timings: "5 PM – 9 PM",
     mapSrc:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.2618802612374!2d78.28180357494958!3d17.476371783426046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbedd078cd924d%3A0x90e17fe8e60d6e59!2sMNS%20SUCCESS%20MARTIAL%20ARTS%20ACADEMY!5e1!3m2!1sen!2sin!4v1779767519760!5m2!1sen!2sin",
     mapUrl:
