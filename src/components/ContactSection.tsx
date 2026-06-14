@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MessageCircle } from "lucide-react";
+import { useForm } from "@formspree/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,13 +9,17 @@ import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [state, handleSubmit] = useForm("xjgdjgwz");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({ title: "Message Sent!", description: "We'll get back to you soon." });
-    setForm({ name: "", email: "", message: "" });
-  };
+  useEffect(() => {
+    if (state.succeeded) {
+      toast({
+        title: "Thank you! We have received your message.",
+      });
+      setForm({ name: "", email: "", phone: "", message: "" });
+    }
+  }, [state.succeeded, toast]);
 
   return (
     <section id="contact" className="section-padding bg-secondary/30">
@@ -80,6 +85,7 @@ const ContactSection = () => {
             className="space-y-4"
           >
             <Input
+              name="name"
               placeholder="Your Name"
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -88,13 +94,24 @@ const ContactSection = () => {
             />
             <Input
               type="email"
+              name="email"
               placeholder="Your Email"
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               required
               className="bg-card border-border h-12"
             />
+            <Input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              value={form.phone}
+              onChange={(e) => setForm({ ...form, phone: e.target.value })}
+              required
+              className="bg-card border-border h-12"
+            />
             <Textarea
+              name="message"
               placeholder="Your Message"
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -102,9 +119,14 @@ const ContactSection = () => {
               rows={5}
               className="bg-card border-border"
             />
-            <Button variant="hero" size="lg" className="w-full py-6 text-sm sm:text-lg" type="submit">
-              Start Training Today
+            <Button variant="hero" size="lg" className="w-full py-6 text-sm sm:text-lg" type="submit" disabled={state.submitting}>
+              {state.submitting ? "Sending..." : "Start Training Today"}
             </Button>
+            {state.errors && state.errors.length > 0 && (
+              <p className="text-red-500 text-sm mt-2 text-center">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </motion.form>
         </div>
       </div>
