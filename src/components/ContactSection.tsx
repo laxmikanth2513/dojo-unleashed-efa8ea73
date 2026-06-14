@@ -122,7 +122,7 @@ const ContactSection = () => {
             <Button variant="hero" size="lg" className="w-full py-6 text-sm sm:text-lg" type="submit" disabled={state.submitting}>
               {state.submitting ? "Sending..." : "Start Training Today"}
             </Button>
-            {state.errors && state.errors.length > 0 && (
+            {state.errors && (
               <p className="text-red-500 text-sm mt-2 text-center">
                 Something went wrong. Please try again.
               </p>
